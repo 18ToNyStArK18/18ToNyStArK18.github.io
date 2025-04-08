@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website by Veda</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Screenshot 2025-03-05 215942.ico"
+    />
+  </head>
+  <body>
+    <button class="Toggle" onclick="toggleDark()">Dark mode</button>
+
+    <div class="navigation">
+      <ul class="links">
+        <li>
+          <button class="linkbutton" onclick="loadSection('home.html')">
+            About my self
+          </button>
+        </li>
+        <li>
+          <button class="linkbutton" onclick="loadSection('city.html')">
+            My City
+          </button>
+        </li>
+        <li>
+          <button class="linkbutton" onclick="loadSection('CV.html')">
+            CV
+          </button>
+        </li>
+        <!-- <li>
+          <button class="linkbutton" onclick="loadSection('achievements.html')">
+            Achievements
+          </button>
+        </li> -->
+      </ul>
+    </div>
+
+    <div id="content">
+      <!-- Dynamic content will load here -->
+    </div>
+
+    <script src="main.js"></script>
+    <script src="city.js"></script>
+  </body>
+</html>
