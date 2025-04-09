@@ -44,7 +44,7 @@ body {
 /* Update to the imge class to work better with the container */
 .imge {
     display: block;
-    width: 300px;
+    width: 350px;
     height: 200px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     object-fit: cover;
@@ -90,7 +90,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 220px);
+    grid-template-rows: repeat(3, 270px);
     gap: 25px;
     max-width: 1000px;
     margin: auto;
