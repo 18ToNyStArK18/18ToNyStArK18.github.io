@@ -1,0 +1,182 @@
+#textarea {
+    background-color: rgb(138, 222, 222);
+    width: 90%; /* Use percentage for responsiveness, fallback for small screens */
+    max-width: 300px; /* Prevent overly wide textarea on large screens */
+    min-height: 300px; /* Flexible height */
+    height: auto; /* Allow content-driven height */
+    margin: 2vw auto; /* Responsive margin */
+    border-color: rgba(247, 231, 9, 0.5);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    box-shadow: 0 0 5px yellow;
+    font-size: clamp(14px, 4vw, 16px); /* Responsive font size */
+    padding: 2%; /* Relative padding */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+.area {
+    width: clamp(140px, 40vw, 180px); /* Responsive width */
+    height: clamp(120px, 30vw, 150px); /* Responsive height */
+    margin: 2vw; /* Responsive margin */
+    background: linear-gradient(45deg, #0f0c29, #302b63);
+    border-color: rgba(247, 231, 9, 0.5);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    color: white;
+    padding: 30px;
+    box-shadow: 0 0 5px yellow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area strong {
+    font-size: clamp(16px, 4vw, 18px); /* Responsive font size */
+    margin-bottom: 5%;
+}
+
+.area span {
+    font-size: clamp(24px, 8vw, 36px); /* Responsive font size */
+    font-weight: bold;
+    display: block;
+    margin-top: 5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center items */
+    gap: 2vw; /* Responsive gap */
+}
+
+.area {
+    transform: scale(1) translateY(0);
+    transition: transform 0.25s ease-in-out;
+    z-index: 1;
+}
+
+.area:hover {
+    transform: scale(1.05) translateY(-5%);
+    z-index: 10;
+    background-color: rgb(80, 85, 85);
+    color: white;
+}
+
+.dark-mode .area {
+    background-color: rgb(3, 3, 3);
+}
+
+.dark-mode #textarea {
+    background-color: #333;
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 1.5px 2.5px black;
+    text-align: center;
+    font-size: clamp(24px, 6vw, 32px); /* Responsive font size */
+    margin: 2vw 0; /* Responsive margin */
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(0, 251, 255, 0.5) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.area:hover::before {
+    opacity: 1;
+}
+
+.toggle-btn {
+    display: block;
+    margin: 2vw auto;
+    padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 15px); /* Responsive padding */
+    background: linear-gradient(45deg, #0f0c29, #302b63);
+    color: white;
+    border: 2px solid rgba(247, 231, 9, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: clamp(14px, 4vw, 16px); /* Responsive font size */
+}
+
+.toggle-btn:hover {
+    background: #302b63;
+    box-shadow: 0 0 5px yellow;
+}
+
+/* Media Queries for Additional Adjustments */
+@media (max-width: 768px) {
+    #textarea {
+        width: 95%; /* Slightly wider on smaller screens */
+        min-height: 200px; /* Smaller height for mobile */
+    }
+
+    .area {
+        width: clamp(120px, 45vw, 160px); /* Adjust width for tablets */
+        height: clamp(100px, 25vw, 130px); /* Adjust height */
+        margin: 1.5vw;
+    }
+
+    .container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #textarea {
+        width: 98%;
+        font-size: clamp(12px, 3.5vw, 14px);
+        padding: 3%;
+    }
+
+    .area {
+        width: 90%; /* Full width minus padding */
+        max-width: 200px;
+        height: clamp(80px, 20vw, 100px);
+        padding: 10px;
+    }
+
+    .area strong {
+        font-size: clamp(14px, 4vw, 16px);
+    }
+
+    .area span {
+        font-size: clamp(20px, 6vw, 28px);
+    }
+
+    h1 {
+        font-size: clamp(20px, 5vw, 24px);
+    }
+
+    .toggle-btn {
+        padding: 6px 12px;
+        font-size: clamp(12px, 3.5vw, 14px);
+    }
+}
