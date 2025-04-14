@@ -1,6 +1,6 @@
 body {
     padding: 40px;
-    background: linear-gradient(to bottom right, #f9f7f3, #e6f7ff); /* Subtle gradient background */
+    background: linear-gradient(to bottom right, #f9f7f3, #e6f7ff); 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     min-height: 100vh;
 }
@@ -16,19 +16,19 @@ body {
     opacity: 0.5;
 }
 body.dark-mode {
-    background: #222; /* Or a subtle dark gradient */
-    color: #eee; /* For better text contrast in dark mode */
+    background: #222;
+    color: #eee; 
 }
 
 .background.dark-mode {
     background: linear-gradient(125deg, #000000, #605d5d);
-    opacity: 0.7; /* You might want to increase opacity in dark mode */
+    opacity: 0.7; 
 }
 .heading {
     text-align: center;
     text-shadow: 0px 0px 12px rgba(41, 128, 185, 0.7), 0px 0px 20px rgba(41, 128, 185, 0.4); /* Multi-layered text shadow */
     font-size: 36px;
-    color: #2c3e50; /* Deep blue-gray */
+    color: #2c3e50; 
     margin-bottom: 10px;
     font-weight: 600;
     position: relative;
@@ -38,9 +38,8 @@ body.dark-mode {
 .heading.dark-mode{
     color: white;
 }
-/* Fix for the My_imagee class */
 .My_imagee {
-    width: 100%;  /* Changed from fixed 300px to be responsive */
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,13 +47,10 @@ body.dark-mode {
 }
 
 .My_imagee:hover {
-    /* Combine the transforms into a single declaration */
     transform: scale(1.1) rotateX(2deg);
-    /* Added transition for smoother effect */
     transition: transform 0.3s ease;
 }
 
-/* Update to the imge class to work better with the container */
 .imge {
     display: block;
     width: 350px;
@@ -121,9 +117,9 @@ body.dark-mode {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     transform: translateZ(0);
-    display: flex; /* Added to handle description positioning */
-    flex-direction: column; /* Stack image and description vertically */
-    justify-content: flex-end; /* Align description at the bottom */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
 }
 
 .img-wrapper:hover {
@@ -154,7 +150,7 @@ body.dark-mode {
 
 .description {
     position: absolute;
-    bottom: -150%; /* Start just below the image */
+    bottom: -150%; 
     left: 0;
     width: 100%;
     color: #ffffff;
@@ -174,16 +170,15 @@ body.dark-mode {
     letter-spacing: 0.5px;
     backdrop-filter: blur(3px);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    max-height: 100%; /* Allow full height if needed */
-    overflow-y: auto; /* Scroll if content overflows */
+    max-height: 100%;
+    overflow-y: auto; 
 }
 
 .img-wrapper:hover .description {
-    bottom: 0; /* Slide up to fully cover the bottom */
+    bottom: 0; 
     transform: translateY(0);
 }
 
-/* Enhanced animations */
 #image1-wrapper,
 #image4-wrapper,
 #image7-wrapper {
@@ -244,7 +239,6 @@ body.dark-mode {
     100% { transform: scale(1) rotate(0deg); opacity: 1; }
 }
 
-/* Image shine effect */
 .img-wrapper::after {
     content: '';
     position: absolute;
@@ -264,7 +258,6 @@ body.dark-mode {
     transition: all 0.75s ease;
 }
 
-/* Add responsive design for smaller screens */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
